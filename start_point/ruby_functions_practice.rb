@@ -52,6 +52,8 @@ def volume_of_sphere(radius, precision=nil)
   return result.round(2)
 end
 
-def fahrenheit_to_celsius(fahrenheit)
-  return fahrenheit.to_f /
+def fahrenheit_to_celsius(fahrenheit, precision=nil)
+  result = (fahrenheit - 32.0) * (5.0/9.0)
+  return result.round(precision) unless (precision == nil)
+  return result.round(2)
 end
